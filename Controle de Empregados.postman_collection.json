@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "5962f8cb-681c-4d33-b5f5-589ed706d5b4",
+		"name": "Controle de Empregados",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastrar",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "automacao",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "inmetrics",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"admissao\": \"01/09/2000\",\r\n  \"cargo\": \"Analista Senior\",\r\n  \"comissao\": \"2.000,00\",\r\n  \"cpf\": \"667.338.490-54\",\r\n  \"departamentoId\": 2,\r\n  \"nome\": \"Analista QA Senior\",\r\n  \"salario\": \"3.500,00\",\r\n  \"sexo\": \"f\",\r\n  \"tipoContratacao\": \"pj\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://inm-test-api.herokuapp.com/empregado/cadastrar",
+					"protocol": "https",
+					"host": [
+						"inm-test-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"empregado",
+						"cadastrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listall",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "automacao",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "inmetrics",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"acesso\": {\r\n      \"acessoId\": 0,\r\n      \"email\": \"string\",\r\n      \"password\": \"string\"\r\n    },\r\n    \"admissao\": \"string\",\r\n    \"cargo\": \"string\",\r\n    \"comissao\": \"string\",\r\n    \"cpf\": \"string\",\r\n    \"departamento\": {\r\n      \"departamentoId\": 0,\r\n      \"empregados\": [\r\n        null\r\n      ],\r\n      \"local\": \"string\",\r\n      \"nomeDepartamento\": \"string\",\r\n      \"orcamento\": \"string\"\r\n    },\r\n    \"empregadoId\": 0,\r\n    \"nome\": \"string\",\r\n    \"salario\": \"string\",\r\n    \"sexo\": \"string\",\r\n    \"tipoContratacao\": \"string\"\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://inm-test-api.herokuapp.com/empregado/list_all",
+					"protocol": "https",
+					"host": [
+						"inm-test-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"empregado",
+						"list_all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListEmpregId",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "automacao",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "inmetrics",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://inm-test-api.herokuapp.com/empregado/list/1130",
+					"protocol": "https",
+					"host": [
+						"inm-test-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"empregado",
+						"list",
+						"1130"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ListEmpregId",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://inm-test-api.herokuapp.com/empregado/list/1132",
+							"protocol": "https",
+							"host": [
+								"inm-test-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"empregado",
+								"list",
+								"1132"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000 ; includeSubDomains"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "25"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 15 Feb 2021 17:48:11 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "Empregado não cadastrado"
+				}
+			]
+		},
+		{
+			"name": "AlterarEmpreg",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "automacao",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "inmetrics",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"admissao\": \"10/10/2020\",\r\n  \"cargo\": \"Analista Junior\",\r\n  \"comissao\": \"600,00\",\r\n  \"cpf\": \"572.976.240-20\",\r\n  \"departamentoId\": 1,\r\n  \"nome\": \"Analista QA Junior\",\r\n  \"salario\": \"1.600,00\",\r\n  \"sexo\": \"f\",\r\n  \"tipoContratacao\": \"pj\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://inm-test-api.herokuapp.com/empregado/alterar/1130",
+					"protocol": "https",
+					"host": [
+						"inm-test-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"empregado",
+						"alterar",
+						"1130"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletarEmpreg",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://inm-test-api.herokuapp.com/empregado/deletar/1132",
+					"protocol": "https",
+					"host": [
+						"inm-test-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"empregado",
+						"deletar",
+						"1132"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "DeletarEmpreg",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://inm-test-api.herokuapp.com/empregado/deletar/1132",
+							"protocol": "https",
+							"host": [
+								"inm-test-api",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"empregado",
+								"deletar",
+								"1132"
+							]
+						}
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000 ; includeSubDomains"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "8"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 15 Feb 2021 17:47:44 GMT"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "Deletado"
+				}
+			]
+		}
+	]
+}
