@@ -3,11 +3,11 @@
 README.md hosted by Nathalia in GitHub
 
 # Projeto Formulário de cadastro Inmetrics
-<h1 align="center">Formulário_Cadastro</h1> 
+<h1 align="right">Formulário_Cadastro</h1> 
 
 
 ## Descrição do Projeto
-<p align="center">O Projeto tem como objetivo cadastrar funcionários no sistema</p>
+<p align="right">O Projeto tem como objetivo cadastrar funcionários no sistema</p>
 
 
 ### Features
